@@ -41,5 +41,12 @@ class MyTestCase(unittest.TestCase):
     def test_part1(self):
         self.assertEqual(55312, day11.part_1("test.txt"))
 
+    def test_blink2(self):
+        initial_arr = [125, 17]
+        actual = 0
+        for num in initial_arr:
+            actual += day11.blink2(num, 25)
+        self.assertEqual(55312, actual)
+
 if __name__ == '__main__':
     unittest.main()
